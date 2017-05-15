@@ -1,0 +1,7 @@
+digraph G{
+	sqrt -> sqrt_iter -> good_enough -> square;
+	sqrt_iter -> improve -> average;
+	good_enough -> abs;
+
+abs[shape=diamond style=filled fillcolor=red]
+}

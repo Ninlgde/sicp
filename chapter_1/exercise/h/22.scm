@@ -1,0 +1,25 @@
+(load "21.scm")
+(load "16.scm")
+(define (timed-prime-test n)
+  (newline)
+  (display n)
+  (start-prime-test n (runtime)))
+
+(define (start-prime-test n start-time)
+  (if (prime? n)
+      (report-prime (- (runtime) start-time))))
+
+(define (report-prime elapsed-time)
+  (display " *** ")
+  (display elapsed-time))
+
+(define (search-for-primes n m)
+  (timed-prime-test n)
+  (if (> m 0)
+       (if (prime? n)
+	   (search-for-primes (+ n 2) (- m 1))
+	   (if (even? n)
+	       (search-for-primes (+ n 1) m)
+	       (search-for-primes (+ n 2) m)))
+       (display " end ")))
+	   

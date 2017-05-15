@@ -1,0 +1,6 @@
+(define (psk x y)
+  (cond ((< x y) 0)
+	((= y 1) 1)
+	((= x y) 1)
+	(else (+ (psk (- x 1) (- y 1))
+		 (psk (- x 1) y)))))
