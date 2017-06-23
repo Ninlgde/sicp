@@ -10,10 +10,10 @@
 (define (avarage x y)
   (/ (+ x y) 2))
 
-(define (good-enough? guess x)
+(define (new-good-enough? guess x)
   (< (abs (- guess x)) 0.001))
 
-(define (new-good-enough? guess x)
+(define (good-enough? guess x)
   (< (abs (- (square guess) x)) 0.001))
 
 (define (sqrt x)
