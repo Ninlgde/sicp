@@ -1,0 +1,10 @@
+(load "exercise/17.scm")
+
+(define (fast-* a b)
+    (define (iter a b n)
+        (if (<= b 1)
+            (+ n a)
+            (if (even? b)
+                (iter (double a) (halve b) n)
+                (iter (double a) (halve (- b 1)) (+ n a)))))
+    (iter a b 0))
