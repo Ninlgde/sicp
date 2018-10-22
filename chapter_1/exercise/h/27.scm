@@ -1,5 +1,5 @@
-(load "16.scm") ;; even?
-(load "21.scm") ;; square
+;(load "16.scm") ;; even?
+;(load "21.scm") ;; square
 (define (expmod base exp m)
   (cond ((= exp 0) 1)
 	((even? exp)

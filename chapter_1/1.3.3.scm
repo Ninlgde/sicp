@@ -41,8 +41,8 @@
       (display next)
       (newline)
       (if (close-enough? guess next)
-	  next
-	  (try next))))
+	        next
+	        (try next))))
   (try first-guess))
 
 (define (sqrt x)
